@@ -13,11 +13,14 @@
   </head>
 
   <body>
-    <%= render "./shared/fr_navbar" %>
-    <%= render "./shared/page_title" %>
+    <%= render "./shared/navbar" %>
+    <%# <%= render "./shared/fr_navbar" %>
+    <%# <%= render "./shared/page_title" %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+
+    <%= render "./shared/footer"%>
   </body>
 </html>
