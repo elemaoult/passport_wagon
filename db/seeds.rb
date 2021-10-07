@@ -12,7 +12,7 @@ Passport.destroy_all
 User.destroy_all
 
 puts 'Creating 100 fake users...'
-100.times do
+10.times do
   user = User.new(
     username:     Faker::Movies::StarWars.character,
     email:        Faker::Internet.email,
@@ -22,7 +22,7 @@ puts 'Creating 100 fake users...'
 end
 
 puts 'Creating 100 fake passports...'
-100.times do
+10.times do
   passport = Passport.new(
     country:                    Faker::Movies::StarWars.planet,
     gender:                     Faker::Gender.type,
