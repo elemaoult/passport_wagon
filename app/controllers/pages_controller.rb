@@ -7,4 +7,7 @@ class PagesController < ApplicationController
     @user = User.all.sample
   end
 
+  def search
+    @passports = Passport.all
+  end
 end
