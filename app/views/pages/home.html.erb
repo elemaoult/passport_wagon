@@ -1,32 +1,57 @@
-<div id="home_text" class='container d-flex flex-row' >
+<div class='fr-container d-flex'> 
 
-  <div class='flex-item'>
-  
-    <div>
-      <h1>Qu'est-ce que le Fournisseur de Pass Sanitaire</h1>
-      <p>
-        Depuis plus d’un an, le gouvernement s’est associé au Wagon pour digitaliser et libéraliser le système d’échange de pass sanitaires. Aujourd’hui, c’est plus de 80% de la population française qui utilise quotidiennement ces services pour ses déplamcements et moments d’échanges....
-      </p>
-    </div>
-    <button class='fr-btn'>Louer un pass</button>
- 
 
-    <div id="pass-card" class="fr-card fr-enlarge-link">
-      <div class="fr-card__body">
-        <h4 class="fr-card__title">
-          <a href="#" class="fr-card__link">Pass Sanitaire Paris - Homme</a>
-        </h4>
-        <p class="fr-card__desc">Pass Sanitaire utilisé 8 fois, garanti personne vaccinée, utilisable immédiatement</p>
+    <div class='main-display flex-item'>
+      <div class="home_page_text">
+        <h1>Qu'est-ce que le Fournisseur de Pass Sanitaire</h1>
+        <p>
+          Depuis plus d’un an, le gouvernement s’est associé au Wagon pour digitaliser et libéraliser le système d’échange de pass sanitaires. Aujourd’hui, c’est plus de 80% de la population française qui utilise quotidiennement ces services pour ses déplamcements et moments d’échanges....
+        </p>
+        <button class='fr-btn'><%= link_to "Louer un pass", passports_path %></button>
       </div>
-      <div class="fr-card__img">
-        <%= image_tag "blank_example_of_pass.jpg", alt: "Pour Rester Ensemble Face Au Virus" %>
+
+      <div class= 'card-container'>
+
+        <div class="pass-card fr-card fr-enlarge-link">
+          <div class="fr-card__body">
+            <h4 class="fr-card__title">
+              <a href="#" class="fr-card__link">Pass Sanitaire Paris - Homme</a>
+            </h4>
+            <p class="fr-card__desc">Pass Sanitaire utilisé 8 fois, garanti personne vaccinée, utilisable immédiatement</p>
+          </div>
+          <div class="fr-card__img">
+            <%= image_tag "blank_example_of_pass.jpg", alt: "Pour Rester Ensemble Face Au Virus" %>
+          </div>
+        </div>
+
+        <div class="pass-card fr-card fr-enlarge-link">
+          <div class="fr-card__body">
+            <h4 class="fr-card__title">
+              <a href="#" class="fr-card__link">Pass Sanitaire Paris - Homme</a>
+            </h4>
+            <p class="fr-card__desc">Pass Sanitaire utilisé 8 fois, garanti personne vaccinée, utilisable immédiatement</p>
+          </div>
+          <div class="fr-card__img">
+            <%= image_tag "blank_example_of_pass.jpg", alt: "Pour Rester Ensemble Face Au Virus" %>
+          </div>
+        </div>
+
+        <div class="pass-card fr-card fr-enlarge-link">
+          <div class="fr-card__body">
+            <h4 class="fr-card__title">
+              <a href="#" class="fr-card__link">Pass Sanitaire Paris - Homme</a>
+            </h4>
+            <p class="fr-card__desc">Pass Sanitaire utilisé 8 fois, garanti personne vaccinée, utilisable immédiatement</p>
+          </div>
+          <div class="fr-card__img">
+            <%= image_tag "blank_example_of_pass.jpg", alt: "Pour Rester Ensemble Face Au Virus" %>
+          </div>
+        </div>        
       </div>
+
     </div>
 
-  </div>
-
-  <div id="picture-container" class='flex-item'>
-    <%= image_tag "pour_rester_ensemble_face_au_virus.png", alt: "Pour Rester Ensemble Face Au Virus", width: 300 %>
-  </div>
-
+    <div class='main-image'>
+        <%= image_tag "pour_rester_ensemble_face_au_virus.png", alt: "Pour Rester Ensemble Face Au Virus"%>
+    </div>
 </div>
