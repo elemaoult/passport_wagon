@@ -1,0 +1,21 @@
+.design-card{
+    margin: 20px;
+    width: 300px;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: #F9F8F6;
+    border: 0.1px solid #9C9C9C;
+    box-sizing: border-box;
+
+}
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.design-card__img {
+    width: 100%;
+    height: 100px;
+}
