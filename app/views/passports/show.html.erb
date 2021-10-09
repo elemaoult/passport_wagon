@@ -2,83 +2,74 @@
 
   <div class='row'>
 
-    <div class='col-12 col-lg-8'>
+    <div class='show-card-container'>
+      <div class="card-trip mx-4">
+          <%= image_tag "passeport.png", alt: "Passeport", width: 300 %>
+        <div class="card-trip-infos">
+          <div>
+            <div class="d-flex flex-row space-between mb-3">
+              <span class="px-3"> 
+                <h4> <%= @passport.country %> </h4>
+              </span>
 
-      <div class="card-passeport">
+              <span class="px-3"> 
+                <h4> <%= @passport.brand_name %> </h4>
+              </span>
 
-        <div>
-            <h4 class="fr-card__title">
-              <a href="#" class="fr-card__link">Pass sanitaire</a>
-                <%= image_tag "passeport.png", alt: "Passeport", width: 300 %>
-            </h4>
+              <span class="px-3"> 
+                <h4> <%= @passport.gender %> </h4>
+              </span>
+
+            </div>
+            <h2>Pass sanitaire</h2>
+            <p>Le pass est valable de 11/10/21 à 16/10/21.
+                  Nous espérons que vous serez satisfaits de cette location.</p>
+          </div>
+        <h2 class="card-pass-rating">Ratings</h2>
         </div>
-
-        <div>
-
-          <span>Perpignan</span>
-          <span>.</span>
-          <span>Pfizer</span>
-          <span>.</span>
-          <span>Masculin</span>
-          <span>.</span>
-          <span>Reviews</span>
-
-        </div>
-
-        <div>
-
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                when an unknown printer took a galley.
-            </p>
-        
-        </div>
-
       </div>
 
-    <div class='col-12 col-lg-4'>
+      </div>
 
       <div id="bill" class="fr-card__bill">
         <div class="card-bill text-center" id="bill_child">
           <img src="" class="fr-responsive-img" alt="">
 
-          <div class="col-md-4">
+          <div class="">
           
             <div class="card p-3 rounded">
 
-              <div>
-                <h2>Price per day</h2>
-                <h3>Rating<h3>
-              </div>
-
               <div class="cards">
 
-                <div class="d-flex justify-content-between border-top-2">
-                  <p><strong>Début</strong> (1)</p>
-                  <p>11/10/21</p>
-                </div>
-
                 <div class="d-flex justify-content-between border-left-2 border-right-2">
-                  <p><strong>Fin</strong> (2)</p>
-                  <p>16/10/21</p>
+                  <strong><td>Début</td></strong>
+                  <td><strong>11/10/21</strong></td>
                 </div>
-
+                <br>
                 <div class="d-flex justify-content-between border-left-2 border-right-2">
-                  <p><strong>Vaccin</strong> (1)</p>
-                  <p>Pfizer</p>
+                  <td><strong>Fin</strong></td>
+                  <td><strong>16/10/21</strong></td>
                 </div>
-
-                <div class="d-flex justify-content-between border-bottom-2">
-                  <p><strong>Genre</strong></p>
-                  <p><strong>Féminin</strong></p>
+                <br>
+                <div class="d-flex justify-content-between border-left-2 border-right-2">
+                  <td><strong>Vaccin</strong></td>
+                  <td><strong><%= @passport.brand_name %></strong></td>
                 </div>
-
+                <br>
+                <div class="d-flex justify-content-between border-left-2 border-right-2">
+                  <td><strong>Genre</strong></td>
+                  <strong><td><%= @passport.gender %></td></strong>
+                </div>
+                
               </div>
-
+              <br>
               <div>
                 <button class="fr-btn"> Réserver </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
     </div>    
