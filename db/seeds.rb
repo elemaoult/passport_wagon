@@ -13,12 +13,11 @@ User.destroy_all
 
 puts 'Creating 100 fake users...'
 10.times do
-  user = User.new(
+  user = User.create(
     username:     Faker::Movies::StarWars.character,
     email:        Faker::Internet.email,
     password:     Faker::Internet.password
   )
-  user.save!
 end
 
 puts 'Creating 100 fake passports...'

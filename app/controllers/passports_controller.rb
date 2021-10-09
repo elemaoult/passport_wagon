@@ -1,12 +1,11 @@
 class PassportsController < ApplicationController
-  before_action :set_passport, only: [ :show ]
+  before_action :set_passport, only: [:show]
 
   def index
     @passports = Passport.all
   end
 
   def show
-    @passports = set_passport 
   end
 
   def new
@@ -28,7 +27,7 @@ class PassportsController < ApplicationController
   private
 
   def set_passport
-    Passport.find(params[:passport_id])
+    @passport = Passport.find(params[:id])
   end
 
   def passport_params
