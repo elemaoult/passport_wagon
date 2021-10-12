@@ -8,7 +8,7 @@
                     <a href="#" class="fr-card__link"> <%= passport.brand_name %> <%= passport.gender %> </a>
                   </h4>
                   <p class="fr-card__desc">Pass Sanitaire utilisé <%= rand(10...44) %> fois, garanti personne vaccinée.</p>
-                  <p class="fr-card__detail"><%= link_to "Détails", passport%></p>
+                  <p class="fr-card__detail"><%= link_to "Détails", passport, style:"text-decoration:none; !important"%></p>
                 </div>
           
           <div class="fr-card__img">
@@ -18,7 +18,6 @@
         </div>
     <% end %>
   </div>
- <button class='fr-btn m-3'><%= link_to "Revenir à la page d'accueil", root_path %></button>
 </div>
-
+<button class='fr-btn m-3'><%= link_to "Revenir à la page d'accueil", root_path, style:"color:white !important;text-decoration:none; !important" %></button>
 
