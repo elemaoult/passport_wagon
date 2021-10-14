@@ -14,8 +14,7 @@ class PassportsController < ApplicationController
 
   def create
     @passport = Passport.new(passport_params)
-    @user = User.find(params[:user_id])
-    @passport.user = @user
+    @passport.user = current_user
     if @passport.valid?
       @passport.save
       redirect_to passport_path(@passport)

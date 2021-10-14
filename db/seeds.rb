@@ -26,7 +26,7 @@ puts 'Creating 100 fake passports...'
     country:                    Faker::Movies::StarWars.planet,
     gender:                     Faker::Gender.type,
     social_security_number:     Faker::NationalHealthService.british_number,
-    brand_name:                 ["Pfizer", "Moderna", "Johnson & Johnson", "Astrazena", "Sinopharm", "Cuba Libre"].sample,
+    brand_name:                 ["Pfizer", "Moderna", "Johnson & Johnson", "Astrazeneca", "Sinopharm", "Cuba Libre"].sample,
     price_per_day:              (10..20)
  )
   passport.user = User.all.sample
