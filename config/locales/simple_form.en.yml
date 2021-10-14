@@ -10,6 +10,13 @@ en:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Please review the problems below:"
+    labels:
+      defaults:
+        social_security_number: 'Numéro de sécurité sociale'
+        gender: 'Genre'
+        brand_name: 'Vaccin'
+        country: 'Pays'
+        price_per_day: 'Prix / jour (€)'
     # Examples
     # labels:
     #   defaults:

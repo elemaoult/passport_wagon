@@ -1,1 +1,21 @@
-<h1>Ouah</h1>
+<h2>Nouveau Pass</h2>
+
+<%= simple_form_for @passport do |f| %>
+  <div class="formulaire-box">
+    <div class="formulaire-item">
+      <h3>Informations obligatoires sur votre pass</h3>
+      <%= f.input :social_security_number, include_blank: false %>
+      <%= f.input :country, collection: Passport::COUNTRIES, include_blank: false %>
+      <%= f.input :gender, collection: {Male: :M, Femelle: :F, Agender: :A, Transgender: :T}, include_blank: false %>
+      <%= f.input :brand_name, collection: Passport::VACCINS, include_blank: false %>
+      
+    </div>
+    <div class="formulaire-item">
+      <h3>Vendez nous du rêve ! (et votre pass) 🤣 </h3>
+      <%= f.input :social_security_number %>
+      <%= f.input :price_per_day, collection: 10..20, include_blank: false %>
+      <button class="fr-btn">Confirmer et lancer la vente</button>
+    </div>
+  </div>
+<% end %>
+  
