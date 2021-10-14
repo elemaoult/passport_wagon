@@ -6,5 +6,4 @@ class User < ApplicationRecord
 
   has_many :passports
   has_many :transactions
-
 end
