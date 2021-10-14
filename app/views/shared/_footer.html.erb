@@ -1,4 +1,4 @@
-<footer class="fr-footer" role="contentinfo" id="footer">
+<footer class="fr-footer navbar navbar-default navbar-static-bottom" role="contentinfo" id="footer">
     <div class="fr-container">
         <div class="fr-footer__body">
             <div class="fr-footer__brand fr-enlarge-link">
@@ -10,7 +10,7 @@
                 </a>
             </div>
             <div class="fr-footer__content">
-                <p class="fr-footer__content-desc">Lorem [...] elit ut.</p>
+                <p class="fr-footer__content-desc">Dedans avec les miens, dehors en citoyen</p>
                 <ul class="fr-footer__content-list">
                     <li class="fr-footer__content-item">
                         <a class="fr-footer__content-link" href="https://legifrance.gouv.fr">legifrance.gouv.fr</a>
@@ -29,20 +29,20 @@
         </div>
         <div class="fr-footer__bottom">
             <ul class="fr-footer__bottom-list">
-                <li class="fr-footer__bottom-item">
-                    <a class="fr-footer__bottom-link" href="#">Plan du site</a>
+                <%# <li class="fr-footer__bottom-item">
+                    <a class="fr-footer__bottom-link">Plan du site</a>
                 </li>
                 <li class="fr-footer__bottom-item">
-                    <a class="fr-footer__bottom-link" href="#">Accessibilité: non/partiellement/totalement conforme</a>
+                    <a class="fr-footer__bottom-link">Accessibilité: non/partiellement/totalement conforme</a>
+                </li> %>
+                <li class="fr-footer__bottom-item">
+                    <a class="fr-footer__bottom-link"> <%= link_to "Mentions Légales", legalspecs_path %></a>
                 </li>
                 <li class="fr-footer__bottom-item">
-                    <a class="fr-footer__bottom-link" href="#">Mentions légales</a>
+                    <a class="fr-footer__bottom-link"> <%= link_to "Données Personnelles", persospecs_path %></a>
                 </li>
                 <li class="fr-footer__bottom-item">
-                    <a class="fr-footer__bottom-link" href="#">Données personnelles</a>
-                </li>
-                <li class="fr-footer__bottom-item">
-                    <a class="fr-footer__bottom-link" href="#">Gestion des cookies</a>
+                    <a class="fr-footer__bottom-link"> <%= link_to "Gestion des Cookies", cookiesspecs_path %></a>
                 </li>
             </ul>
             <div class="fr-footer__bottom-copy">

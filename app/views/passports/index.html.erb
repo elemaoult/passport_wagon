@@ -1,3 +1,4 @@
+
 <form>
   <div>
   <select class=“fr-select” name="brand" id="brand-select">
@@ -20,18 +21,18 @@
   </div>
 </form>
 
+<div class="fr-container d-flex">
+  <div class="fr-grid-row fr-grid-row--gutters">
+    <% @passports.each_with_index do |passport, index| %>
+        <div class="fr-col-3 fr-col-md-3">
+          <div class="fr-card fr-enlarge-link p-3 m-1">
 
-<div class="fr-grid-row fr-grid-row--gutters">
-  <div class="fr-container d-flex">
-    <% @passports.first(4).each_with_index do |passport, index| %>
-        <div class="fr-col-12 fr-col-md-3">
-          <div class="fr-card fr-enlarge-link p-3">
                 <div class="fr-card__body">
                   <h4 class="fr-card__title">
                     <a href="#" class="fr-card__link"> <%= passport.brand_name %> <%= passport.gender %> </a>
                   </h4>
                   <p class="fr-card__desc">Pass Sanitaire utilisé <%= rand(10...44) %> fois, garanti personne vaccinée.</p>
-                  <p class="fr-card__detail"><%= link_to "Détails", passport%></p>
+                  <p class="fr-card__desc"><%= link_to "Détails", passport, style:"text-decoration:none; !important"%></p>
                 </div>
           <div class="fr-card__img">
                 <img src="https://picsum.photos/id/<%= rand(10...42) %>/200/300">
@@ -40,7 +41,8 @@
         </div>
     <% end %>
   </div>
- <button class='fr-btn m-3'><%= link_to "Revenir à la page d'accueil", root_path %></button>
 </div>
-
-
+<br>
+<div class="fr-container">
+  <button class='fr-btn m-3'><%= link_to "Revenir à la page d'accueil", root_path, style:"color:white !important;text-decoration:none; !important" %></button>
+</div>

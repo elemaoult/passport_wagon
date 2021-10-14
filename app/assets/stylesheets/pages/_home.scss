@@ -1,6 +1,7 @@
 // Specific CSS for your home-page
 
 .container {
+  display: flex;
   justify-content: space-between
 }
 
@@ -21,9 +22,6 @@
   max-height:100%;
 }
 
-.pass-card {
-}
-
 .pass-card p {
   size: 14px
 }
@@ -34,11 +32,6 @@
   grid-gap: 16px;
   margin-top: 110px;
 }
-
-// div {  
-//   border-style: solid;
-//   border-color: red;
-// }
 
 .fr-card__link {
   size: 16px;
