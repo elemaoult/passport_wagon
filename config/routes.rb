@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
+  get "donneespersonnelles", to: 'pages#persospecs', as: 'persospecs'
+  get "mentionslegales", to: 'pages#legalspecs', as: 'legalspecs'
+  get "gestiondescookies", to: 'pages#cookiesspecs', as: 'cookiesspecs'
+
+  
   get "dashboard", to: 'pages#dashboard'
   get "search", to: 'pages#search'
   resources :transactions, only: [:update, :show]

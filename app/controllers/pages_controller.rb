@@ -9,4 +9,13 @@ class PagesController < ApplicationController
   def search
     @passports = Passport.all
   end
+
+  def legalspecs
+  end
+
+  def cookiesspecs
+  end
+
+  def persospecs
+  end
 end
