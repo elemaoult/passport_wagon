@@ -1,17 +1,38 @@
 // Specific CSS for your home-page
-#home_text p {
+
+.container {
+  display: flex;
+  justify-content: space-between
+}
+
+.home__page_text p {
   size: 16px;
   text-justify: auto;
 }
 
-#picture-container .flex-container {
-  display: flex;
-  align-items: strech;
-  padding: 5px
+.main-display {
+  width: 75%;
 }
 
-// #pass-card {
-//   height: 200px;
-//   width: 100px;
-//   padding: 5px;
-// }
+.main-image {
+  width: 25%;
+}
+.main-image img{
+  max-width:100%;
+  max-height:100%;
+}
+
+.pass-card p {
+  size: 14px
+}
+
+.card-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-top: 110px;
+}
+
+.fr-card__link {
+  size: 16px;
+}
