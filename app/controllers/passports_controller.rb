@@ -30,7 +30,7 @@ class PassportsController < ApplicationController
   end
 
   def passport_params
-    params.require(:passport).permit(:social_security_number, :country, :gender, :brand_name, :price_per_day)
+    params.require(:passport).permit(:social_security_number, :country, :gender, :brand_name, :price_per_day, :photo)
   end
 
 end

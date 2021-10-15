@@ -15,6 +15,7 @@ en:
         social_security_number: 'Numéro de sécurité sociale'
         gender: 'Genre'
         brand_name: 'Vaccin'
+        photo: 'Déposer le scan de votre pass'
         country: 'Pays'
         price_per_day: 'Prix / jour (€)'
     # Examples
