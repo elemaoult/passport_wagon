@@ -1,32 +1,63 @@
-<div id="home_text" class='container d-flex flex-row' >
-
-  <div class='flex-item'>
+<div class='fr-container d-flex my-3'> 
+  <div class='main-display flex-item'>
+    <div class="home_page_text m-3">
+      <div class="text intro">
+        <h1>Qu'est-ce que le Fournisseur de Pass Sanitaire ?</h1>
+        <p class="my-3">
+          Depuis plus d’un an, le gouvernement s’est associé au Wagon pour digitaliser et libéraliser le système d’échange de pass sanitaires. Aujourd’hui, c’est plus de 80% de la population française qui utilise quotidiennement ces services pour ses déplamcements et moments d’échanges....
+        </p>
+        <button class='fr-btn my-3'><%= link_to "Louer un pass", passports_path, style:"color:white !important;text-decoration:none; !important" %></button>
+      </div>
+      <br>
+      <div class="text about-us my-3">
+        <h2>Que sommes-nous ?</h2>
+        <ul class="list-unstyled d-flex">
+          <div class="col">
+          <li>Assertif mais bienveillants</li>
+          <li>Pugnaces mais doux</li>
+          </div>
+          <div class="col">
+          <li>Irrévérencieux mais respectueux</li>
+          <li>Impétueux mais réfléchis</li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class='main-image flex-item my-3 w-50'>
+    <%= image_tag "pour_rester_ensemble_face_au_virus.png", alt: "Pour Rester Ensemble Face Au Virus"%>
+  </div>
   
-    <div>
-      <h1>Qu'est-ce que le Fournisseur de Pass Sanitaire</h1>
-      <p>
-        Depuis plus d’un an, le gouvernement s’est associé au Wagon pour digitaliser et libéraliser le système d’échange de pass sanitaires. Aujourd’hui, c’est plus de 80% de la population française qui utilise quotidiennement ces services pour ses déplamcements et moments d’échanges....
-      </p>
+</div>
+<br>
+
+<div class='fr-container my-3'>
+  <div class="fr-grid-row fr-grid-row--gutters m-3">
+    <h1>Top pass sanitaires à côté de chez vous</h1>
+    <div class="fr-container d-flex my-3">
+      <% Passport.all.sample(4).each_with_index do |passport, index| %>
+          <div class="fr-col-12 fr-col-md-3">
+            <div class="fr-card fr-enlarge-link p-3 m-2">
+                  <div class="fr-card__body">
+                    <h4 class="fr-card__title">
+                      <a href="#" class="fr-card__link"> <%= passport.brand_name %> <%= passport.gender %> </a>
+                    </h4>
+                    <p class="fr-card__desc">Pass Sanitaire utilisé <%= rand(10...44) %> fois, garanti personne vaccinée.</p>
+                    <p class="fr-card__desc"><%= link_to "Détails", passport, style:"text-decoration:none; !important"%></p>
+                  </div>
+                  <div class="fr-card__img">
+                    <img src="https://picsum.photos/id/<%= rand(10...42) %>/200/300">
+                  </div>
+             </div>
+           </div>
+      <% end %>
     </div>
-    <button class='fr-btn'>Louer un pass</button>
- 
-
-    <div id="pass-card" class="fr-card fr-enlarge-link">
-      <div class="fr-card__body">
-        <h4 class="fr-card__title">
-          <a href="#" class="fr-card__link">Pass Sanitaire Paris - Homme</a>
-        </h4>
-        <p class="fr-card__desc">Pass Sanitaire utilisé 8 fois, garanti personne vaccinée, utilisable immédiatement</p>
-      </div>
-      <div class="fr-card__img">
-        <%= image_tag "blank_example_of_pass.jpg", alt: "Pour Rester Ensemble Face Au Virus" %>
-      </div>
     </div>
-
+    <br>
+    <div class="text faire-don my-3">
+    <div role="alert" class="fr-alert fr-alert--info">
+      <p class="fr-alert__title">Cyril a besoin d'une voiture!</p>
+      <p>Pour la bonne cause, faites un don en cliquant <%= link_to "ici", "app/assets/images/cyril_voiture.jpg" %></button>.</p>
+    </div>
   </div>
-
-  <div id="picture-container" class='flex-item'>
-    <%= image_tag "pour_rester_ensemble_face_au_virus.png", alt: "Pour Rester Ensemble Face Au Virus", width: 300 %>
-  </div>
-
 </div>

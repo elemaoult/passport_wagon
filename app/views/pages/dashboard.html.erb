@@ -1,3 +1,17 @@
-<h1>Hello</h1>
+<div class="fr-container">
+  <h1>Hello <%= current_user.username %> ! You look awesome today...</h1>
+<div class="fr-grid-row fr-grid-row--gutters">
+    <div class="drapeau-bleu col p-5 m-4 text-center">
+      <strong><%= link_to "Mes précédentes locations de pass sanitaire", passports_path, style:"color:white !important; text-decoration:none; !important" %></strong>
+    </div>
+    <div class="col p-5 m-4 text-center">
+    <strong><%= link_to "Cliquer ici, si je suis triste", "https://www.youtube.com/watch?v=lqx6okl2tt8", style:"text-decoration:none; !important" %></button></strong>
+    </div>
+    <div class="col">
+      <div class="drapeau-rouge p-5 my-4 "><strong><%= link_to "Ajouter/Modifier mon pass actuel", new_passport_path, style:"color:white !important; text-decoration:none; !important" %></strong></div>
+      <div class="drapeau-rouge p-5"><strong><%= link_to "Chercher un pass sanitaire", passports_path, style:"color:white !important;text-decoration:none; !important" %></strong></div>
+      <div class="drapeau-rouge p-5 my-4"><strong><%= link_to "Partager ce site sur les réseaux sociaux", "https://www.linkedin.com/feed/", style:"color:white !important;text-decoration:none; !important" %></strong></div>
+    </div>
+</div>
+</div>
 
-<%= @user.username %>
