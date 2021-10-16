@@ -1,16 +1,19 @@
 class ReviewsController < ApplicationController
   def new
+    @passport = Passport.find(params[:passport_id])
     @review = Review.new
   end
 
   def create
-    @review = Review.new(passport_params)
+    @review = Review.new(review_params)
+    @passport = Passport.find(params[:passport_id])
     @review.user = current_user
+    @review.passport = @passport
     if @review.save
-      redirect_to new_review_path
+      redirect_to passport_path(@passeport)
     else
       flash[:alert] = "Something went wrong."
-      render :new
+      render 'passports/show'
     end
   end
 
