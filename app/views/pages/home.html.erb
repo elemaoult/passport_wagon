@@ -1,4 +1,4 @@
-<div class='fr-container d-flex my-3'> 
+<div class='fr-container d-flex my-3'>
   <div class='main-display flex-item'>
     <div class="home_page_text m-3">
       <div class="text intro">
@@ -9,8 +9,8 @@
         <button class='fr-btn my-3'><%= link_to "Louer un pass", passports_path, style:"color:white !important;text-decoration:none; !important" %></button>
       </div>
       <br>
-      <div class="text about-us my-3">
-        <h2>Que sommes-nous ?</h2>
+      <div class="text intro">
+        <h2>Qui sommes-nous ?</h2>
         <ul class="list-unstyled d-flex">
           <div class="col">
           <li>Assertif mais bienveillants</li>
@@ -27,7 +27,7 @@
   <div class='main-image flex-item my-3 w-50'>
     <%= image_tag "pour_rester_ensemble_face_au_virus.png", alt: "Pour Rester Ensemble Face Au Virus"%>
   </div>
-  
+
 </div>
 <br>
 
@@ -55,9 +55,14 @@
     </div>
     <br>
     <div class="text faire-don my-3">
-    <div role="alert" class="fr-alert fr-alert--info">
+    <div role="alert" class="fr-alert fr-alert--info" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
       <p class="fr-alert__title">Cyril a besoin d'une voiture!</p>
-      <p>Pour la bonne cause, faites un don en cliquant <%= link_to "ici", "app/assets/images/cyril_voiture.jpg" %></button>.</p>
+      <p>Pour la bonne cause, faites un don en cliquant ici.</p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+        <%= image_tag "cyril-voiture.jpg" , alt: "Top Gun"%>
+      </div>
+      </div>
     </div>
   </div>
 </div>

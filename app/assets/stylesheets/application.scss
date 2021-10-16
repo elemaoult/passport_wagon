@@ -7,9 +7,10 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "jquery-bar-rating/dist/themes/css-stars";
 
 // Your CSS partials
+@import "config/index";
 @import "components/index";
 @import "pages/index";
-@import "components/css/dsfr.min.css";
+@import "components/css/index";
+// @import "components/css/dsfr.min.css";
