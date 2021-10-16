@@ -4,10 +4,10 @@
   <div class="formulaire-box">
     <div class="formulaire-item">
       <h3>Informations obligatoires sur votre pass</h3>
-      <%= f.input :social_security_number, include_blank: false %>
       <%= f.input :country, collection: Passport::COUNTRIES, include_blank: false %>
       <%= f.input :gender, collection: {Male: :Male, Female: :Female, Agender: :Agender, Transgender: :Transgender}, include_blank: false %>
       <%= f.input :brand_name, collection: Passport::VACCINS, include_blank: false %>
+      <%= f.input :avaibility_date, as: :date %>
       <%= f.input :photo, as: :file, include_blank: false %>
     </div>
     <div class="formulaire-item">
@@ -18,4 +18,3 @@
     </div>
   </div>
 <% end %>
-  
