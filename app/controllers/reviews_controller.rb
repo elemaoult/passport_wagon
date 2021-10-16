@@ -2,6 +2,7 @@ class ReviewsController < ApplicationController
   def new
     @passport = Passport.find(params[:passport_id])
     @review = Review.new
+    authorize @review
   end
 
   def create
@@ -9,6 +10,7 @@ class ReviewsController < ApplicationController
     @passport = Passport.find(params[:passport_id])
     @review.user = current_user
     @review.passport = @passport
+    authorize @review
     if @review.save
       redirect_to passport_path(@passeport)
     else
