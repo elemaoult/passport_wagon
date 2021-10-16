@@ -17,17 +17,31 @@
               <span class="px-3">
                 <h4> <%= @passport.gender %> </h4>
               </span>
+            <br>
             </div>
             <h2>Pass sanitaire</h2>
               <h4> <%= @passport.comments %> </h4>
               <p>Le pass est valable à partir du <%= @passport.avaibility_date %>.
                   Nous espérons que vous serez satisfaits de cette location.</p>
+            
+            <div>
+            <h2 class="card-pass-rating">Reviews</h2>
+            <%= link_to 'Laisser un commentaire', new_passport_review_path(@passport) %>
+              <div id="reviews">
+                <% if @passport.reviews.blank? %>
+                  Be the first to leave a review
+                <% else %>
+                <% @passport.reviews.each do |review| %>
+                  <p id="review-<%= review.id %>"><%= review.content %></p>
+                <% end %>
+            <% end %>
+            </div>
+    </div>
           </div>
-        <h2 class="card-pass-rating">Ratings</h2>
         </div>
       </div>
-     </div>
-      <div id="bill" class="fr-card__bill">
+    </div>
+    <div id="bill" class="fr-card__bill">
         <div class="card-bill text-center" id="bill_child">
           <img src="" class="fr-responsive-img" alt="">
           <div class="">
@@ -62,5 +76,6 @@
         </div>
       </div>
     </div>
+    
   </div>
 </div>
