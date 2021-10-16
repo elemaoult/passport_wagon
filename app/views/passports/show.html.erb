@@ -20,7 +20,7 @@
             </div>
             <h2>Pass sanitaire</h2>
               <h4> <%= @passport.comments %> </h4>
-              <p>Le pass est valable de 11/10/21 à 16/10/21.
+              <p>Le pass est valable à partir du <%= @passport.avaibility_date %>.
                   Nous espérons que vous serez satisfaits de cette location.</p>
           </div>
         <h2 class="card-pass-rating">Ratings</h2>
@@ -35,12 +35,12 @@
               <div class="cards">
                 <div class="d-flex justify-content-between border-left-2 border-right-2">
                   <strong><td>Début</td></strong>
-                  <td><strong>11/10/21</strong></td>
+                  <td><strong> <%= @passport.avaibility_date %> </strong></td>
                 </div>
                 <br>
                 <div class="d-flex justify-content-between border-left-2 border-right-2">
-                  <td><strong>Fin</strong></td>
-                  <td><strong>16/10/21</strong></td>
+                  <td><strong>Durée de location minimale</strong></td>
+                  <td><strong>1 mois</strong></td>
                 </div>
                 <br>
                 <div class="d-flex justify-content-between border-left-2 border-right-2">
