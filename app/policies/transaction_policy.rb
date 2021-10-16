@@ -1,16 +1,8 @@
-class PassportPolicy < ApplicationPolicy
+class TransactionPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
     end
-  end
-
-  def index?
-    true
-  end
-
-  def show?
-    true
   end
 
   def new?
