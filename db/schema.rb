@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2021_10_16_103259) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "comment"
+    t.text "comments"
     t.date "avaibility_date"
     t.index ["user_id"], name: "index_passports_on_user_id"
   end
