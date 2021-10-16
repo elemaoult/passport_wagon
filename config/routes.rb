@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   resources :passports, only: [:index, :new, :create, :update, :show ] do
     resources :transactions, only: [:new, :create]
+
+  resources :reviews, only: [:new, :create]
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
