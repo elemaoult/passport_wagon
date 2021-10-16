@@ -55,9 +55,14 @@
     </div>
     <br>
     <div class="text faire-don my-3">
-    <div role="alert" class="fr-alert fr-alert--info">
+    <div role="alert" class="fr-alert fr-alert--info" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
       <p class="fr-alert__title">Cyril a besoin d'une voiture!</p>
-      <p>Pour la bonne cause, faites un don en cliquant <%= link_to "ici", "app/assets/images/cyril_voiture.jpg" %></button>.</p>
+      <p>Pour la bonne cause, faites un don en cliquant ici.</p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+        <%= image_tag "cyril-voiture.jpg" , alt: "Top Gun"%>
+      </div>
+      </div>
     </div>
   </div>
 </div>
