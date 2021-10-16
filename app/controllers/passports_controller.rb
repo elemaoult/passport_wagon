@@ -1,8 +1,9 @@
 class PassportsController < ApplicationController
   before_action :set_passport, only: [:show]
+  skip_before_action :authenticate_user! , only: [:show, :index]
 
   def index
-    @passports = Passport.all
+    @passports = policy_scope(Passport).order(created_at: :desc)
 
     if params[:brand].present?
       @passports = @passports.where("brand_name ILIKE ?", "%#{params[:brand]}%")
@@ -18,15 +19,18 @@ class PassportsController < ApplicationController
   end
 
   def show
+    authorize @passport
   end
 
   def new
     @passport = Passport.new
+    authorize @passport
   end
 
   def create
     @passport = Passport.new(passport_params)
     @passport.user = current_user
+    authorize @passport
     if @passport.valid?
       @passport.save
       redirect_to passport_path(@passport)
