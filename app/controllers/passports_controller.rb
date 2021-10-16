@@ -3,7 +3,7 @@ class PassportsController < ApplicationController
 
   def index
     if params[:brand].present?
-      @passports = Passport.where("brand_name ILIKE ?", "%#{params[:brand]}%").and(Passport.where("gender ILIKE ?", "%#{params[:gender]}%"))     
+      @passports = Passport.where("brand_name ILIKE ?", "%#{params[:brand]}%").and(Passport.where("gender ILIKE ?", "%#{params[:gender]}%"))
     else
       @passports = Passport.all
     end
