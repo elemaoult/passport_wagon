@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
     @review.passport = @passport
     authorize @review
     if @review.save
-      redirect_to passport_path(@passgport)
+      redirect_to passport_path(@passport)
     else
       flash[:alert] = "Something went wrong."
       render 'passports/show'
@@ -24,5 +24,4 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:content, :rating)
   end
-
 end
