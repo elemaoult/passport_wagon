@@ -1,5 +1,6 @@
 class PassportsController < ApplicationController
   before_action :set_passport, only: [:show]
+  skip_before_action :authenticate_user! , only: [:show]
 
   def index
     if params[:brand].present?
@@ -10,6 +11,7 @@ class PassportsController < ApplicationController
   end
 
   def show
+    authorize @passport
   end
 
   def new
