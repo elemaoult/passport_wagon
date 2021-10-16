@@ -3,12 +3,18 @@ class PassportsController < ApplicationController
   skip_before_action :authenticate_user! , only: [:show, :index]
 
   def index
+    @passports = policy_scope(Passport).order(created_at: :desc)
+
     if params[:brand].present?
-      @passports = Passport.where("brand_name ILIKE ?", "%#{params[:brand]}%").and(Passport.where("gender ILIKE ?", "%#{params[:gender]}%"))
-    # Question to ask. How to deal with filtering scope policy
-    else
-      @passports = policy_scope(Passport).order(created_at: :desc)
-      # @passports = Passport.all
+      @passports = @passports.where("brand_name ILIKE ?", "%#{params[:brand]}%")
+    end
+
+    if params[:gender].present?
+      @passports = @passports.where("gender ILIKE ?", "%#{params[:gender]}%")
+    end
+
+    if params[:avaibility_date].present?
+      @passports = @passports.where("avaibility_date >= ?" , params[:avaibility_date])
     end
   end
 
@@ -40,7 +46,7 @@ class PassportsController < ApplicationController
   end
 
   def passport_params
-    params.require(:passport).permit(:social_security_number, :country, :gender, :brand_name, :price_per_day, :photo)
+    params.require(:passport).permit(:social_security_number, :country, :gender, :brand_name, :price_per_day, :photo, :comments)
   end
 
 end
