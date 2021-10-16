@@ -2,15 +2,33 @@
   <h1>Hello <%= current_user.username %> ! You look awesome today...</h1>
 <div class="fr-grid-row fr-grid-row--gutters">
     <div class="drapeau-bleu col p-5 m-4 text-center">
-      <strong><%= link_to "Mes précédentes locations de pass sanitaire", passports_path, style:"color:white !important; text-decoration:none; !important" %></strong>
+      <button class="fr-btn fr-btn--secondary"><strong><%= link_to "Mes précédentes locations de pass sanitaire", passports_path, style:"color:white !important; text-decoration:none; !important" %></strong></button>
     </div>
+
     <div class="col p-5 m-4 text-center">
-    <strong><%= link_to "Cliquer ici, si je suis triste", "https://www.youtube.com/watch?v=lqx6okl2tt8", style:"text-decoration:none; !important" %></button></strong>
+    <button type="button" class="fr-btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/lqx6okl2tt8" data-target="#myModal"><strong>Cliquer ici, si je suis triste</strong></button>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+        <button type="button" class="fr-link--close fr-link" data-dismiss="modal" aria-label="Close">
+            Fermer
+          </button>        
+          <!-- 16:9 aspect ratio -->
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
     </div>
     <div class="col">
-      <div class="drapeau-rouge p-5 my-4 "><strong><%= link_to "Ajouter/Modifier mon pass actuel", new_passport_path, style:"color:white !important; text-decoration:none; !important" %></strong></div>
-      <div class="drapeau-rouge p-5"><strong><%= link_to "Chercher un pass sanitaire", passports_path, style:"color:white !important;text-decoration:none; !important" %></strong></div>
-      <div class="drapeau-rouge p-5 my-4"><strong><%= link_to "Partager ce site sur les réseaux sociaux", "https://www.linkedin.com/feed/", style:"color:white !important;text-decoration:none; !important" %></strong></div>
+  
+    
+      <div class="drapeau-rouge p-5 my-4 "><button class="fr-btn fr-btn--secondary"><strong><%= link_to "Ajouter ou modifier mon pass actuel", new_passport_path, style:"color:white !important; text-decoration:none; !important" %></strong></button></div>
+      <div class="drapeau-rouge p-5"><button class="fr-btn fr-btn--secondary"><strong><%= link_to "Chercher un pass sanitaire", passports_path, style:"color:white !important;text-decoration:none; !important" %></strong></button></div>
+      <div class="drapeau-rouge p-5 my-4"><button class="fr-btn fr-btn--secondary"><strong><%= link_to "Partager ce site sur les réseaux sociaux", "https://www.linkedin.com/feed/", style:"color:white !important;text-decoration:none; !important" %></strong></button></div>
     </div>
 </div>
 </div>
