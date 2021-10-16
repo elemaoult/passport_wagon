@@ -2,10 +2,18 @@ class PassportsController < ApplicationController
   before_action :set_passport, only: [:show]
 
   def index
+    @passports = Passport.all
+
     if params[:brand].present?
-      @passports = Passport.where("brand_name ILIKE ?", "%#{params[:brand]}%").and(Passport.where("gender ILIKE ?", "%#{params[:gender]}%"))
-    else
-      @passports = Passport.all
+      @passports = @passports.where("brand_name ILIKE ?", "%#{params[:brand]}%")
+    end
+
+    if params[:gender].present?
+      @passports = @passports.where("gender ILIKE ?", "%#{params[:gender]}%")
+    end
+
+    if params[:avaibility_date].present?
+      @passports = @passports.where("avaibility_date >= ?" , params[:avaibility_date])
     end
   end
 
