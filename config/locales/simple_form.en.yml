@@ -18,6 +18,7 @@ en:
         photo: 'Déposer le scan de votre pass'
         country: 'Pays'
         price_per_day: 'Prix / jour (€)'
+        comment: 'Description du pass'
     # Examples
     # labels:
     #   defaults:

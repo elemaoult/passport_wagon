@@ -12,7 +12,7 @@
     </div>
     <div class="formulaire-item">
       <h3>Vendez nous du rêve ! (et votre pass) 🤣 </h3>
-      <%= f.input :social_security_number %>
+      <%= f.input :comment, include_blank: false %>
       <%= f.input :price_per_day, collection: 10..20, include_blank: false %>
       <button class="fr-btn">Confirmer et lancer la vente</button>
     </div>
