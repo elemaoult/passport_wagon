@@ -1,15 +1,11 @@
 
 <form>
   <div>
-  <select class=“fr-select” name="brand" id="brand-select">
-    <option value=""> Choissez votre fabricant </option>
-    <option value="Johnson">Johnson & Johnson</option>
-    <option value="Astrazena">Astrazena</option>
-    <option value="Pfizer">Pfizer</option>
-    <option value="Moderna">Moderna</option>
-    <option value="Sinopharm">Sinopharm</option>
-  </select>
+    <%= select_tag(:brand, options_for_select(Passport.distinct.pluck(:brand_name))) %>
   </div>
+  <%# <div>
+    <input type="date" class=>
+  </div> %>
   <div>
     <%= form_tag passports_path, method: :get do %>
     <%= text_field_tag :gender,
