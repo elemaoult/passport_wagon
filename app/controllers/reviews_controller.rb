@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
     @review.passport = @passport
     authorize @review
     if @review.save
-      redirect_to passport_path(@passeport)
+      redirect_to passport_path(@passgport)
     else
       flash[:alert] = "Something went wrong."
       render 'passports/show'
